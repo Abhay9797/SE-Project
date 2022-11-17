@@ -1,6 +1,7 @@
 import csv
 import json
 import requests
+import matplotlib.pyplot as plt
 
 def request_analysis(text_to_analyze):
     payload = "text=" + str(text_to_analyze)
@@ -32,11 +33,17 @@ def analyze_text(file):
                     print()
                 
                 except UnicodeEncodeError as e:
-                    continue  
+                    continue
+        x = ["Yes", "No", "Neutral"]
+        y = [countpos, countneg, countneu]
+        plt.pie(y,labels = x)
+ 
+        plt.show()                  
         csvfile.close() 
 
 def main():
     input1 = input("Enter CSV Directory: ")
     analyze_text(input1)
+    
 
 main()
