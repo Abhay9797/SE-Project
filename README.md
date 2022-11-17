@@ -9,3 +9,5 @@ We have used Streamlit as a frontend for our product.
 We have integrated all our modules with streamlit (Login, Home page, Data extractor, etc)
 
 run 'app.py' to start the execution
+
+Use pip install requirements.txt before starting
